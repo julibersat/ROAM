@@ -1,3 +1,10 @@
 <template name="journeyListView">
 <h1>Journey List</h1>
+<hr>
+{{#each currentUser.userJourneys}}
+<h1>{{journeyType}}{{timeStart}} - {{timeEnd}}</h1>
+{{#each userCaptures}}
+<h1>Capture Here</h1>
+{{/each}}
+{{/each}}
 </template>
