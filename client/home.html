@@ -1,7 +1,6 @@
 <template name="homeView">
-<h1>You are home</h1>
-{{#each directiveTypes}}
-<h1>Directive Text: {{name}}</h1>
+{{#each randomPrompts}}
+<h2>{{.}}</h2>
 {{/each}}
 {{#unless currentUser}}
 {{> atForm}}
