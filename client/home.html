@@ -1,14 +1,9 @@
 <template name="homeView">
-<h1>You are home</h1>
-<hr>
-{{#if isCapturing.get}}
-<h1>{{getRandomCapturePrompt}}</h1>
-{{else}}
-<h1>{{getRandomDirectivePrompt.get}}</h1>
-<button class="btn btn-primary" data-new-directive>Impossible?</button>
-<button class="btn btn-primary" data-new-capture>Capture</button>
-{{/if}}
 {{#unless currentUser}}
+<h1>ROAM</h1>
+<hr>
 {{> atForm}}
+{{else}}
+<a href="{{pathFor 'safetyClause'}}">Go to Safety</a>
 {{/unless}}
 </template>

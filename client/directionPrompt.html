@@ -1,3 +1,24 @@
-<template name="directionPromptView">
-<h1>Direction Prompt</h1>
+<template name="directivePromptView">
+{{#if isCapturing}}
+<h1>{{getRandomCapturePrompt}}</h1>
+{{#autoForm type="insert" collection="UserCaptures" type="insert" id="userCapture"}}
+{{> afQuickField name="captureImageId"}}
+{{> afQuickField name="tags"}}
+<input type="hidden" name="userJourneyId" value="{{journeyId}}">
+<input type="hidden" name="directiveType" value="xxx">
+<input type="hidden" name="directiveText" value="xxx">
+<button class="btn btn-primary" type="submit">Submit</button>
+{{/autoForm}}
+{{else}}
+<div class="row">
+<div class="col-md-6">
+<img class="img-responsive" src="{{dirImage.link}}">
+</div>
+<div class="col-md-6">
+<h1>{{getRandomDirectivePrompt}}</h1>
+<button class="btn btn-primary" data-new-directive>Impossible?</button>
+<button class="btn btn-primary" data-new-capture>Capture</button>
+</div>
+</div>
+{{/if}}
 </template>
