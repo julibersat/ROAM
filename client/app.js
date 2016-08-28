@@ -4,18 +4,20 @@ App.getRandomDirective = function(){
 	let dirArray = DirectiveTypes.find().fetch()
 	let randIndex = Math.floor(Math.random() * dirArray.length);
 	let randDir = dirArray[randIndex];
-	if(randDir.name === "distance"){
-		let unitArray = DirectiveTypes.find().fetch()
-		let randIndexUnit = Math.floor(Math.random() * dirArray.length);
-		let randUnit = dirArray[randIndex];
-		let verbArray = DirectiveTypes.find().fetch()
-		let randIndexVerb = Math.floor(Math.random() * dirArray.length);
-		let randVerb = dirArray[randIndex];
+	let directionText = randDir.name;
+	if(randDir.name === "Distance"){
+		let unitArray = DirectionUnits.find().fetch()
+		let randIndexUnit = Math.floor(Math.random() * unitArray.length);
+		let randUnit = unitArray[randIndexUnit];
+		let verbArray = DirectionVerbs.find().fetch()
+		let randIndexVerb = Math.floor(Math.random() * verbArray.length);
+		let randVerb = verbArray[randIndexVerb];
 		//get random verb // get random unit
+		//generate random prime number
+		let randNum = Math.floor(Math.random() * 20);
+		directionText = randVerb.text + " " + randNum + " " + randUnit.text;
 	}
-	else {
-		return randDir.name;
-	}
+	return directionText;
 }
 
 App.getRandomCapturePrompt = function(){
