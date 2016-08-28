@@ -30,3 +30,12 @@ accounts-base
 accounts-password
 useraccounts:bootstrap
 kadira:blaze-layout
+arillo:flow-router-helpers
+dburles:collection-helpers
+mfactory:admin-lte
+matb33:bootstrap-glyphicons
+session
+aldeed:collection2
+alanning:roles
+fortawesome:fontawesome
+iron:router
