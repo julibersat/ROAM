@@ -1,7 +1,7 @@
 Template.directivePromptView.onCreated(function(){
 	this.randomDirective = new ReactiveVar(false);
 	this.randomCapture = new ReactiveVar(false);
-	this.isCapturing = new ReactiveVar(false);
+	this.isCapturing = Session.get("isCapturing");
 	this.directiveId = new ReactiveVar(false);
 	let self = this;
 	Meteor.call("getRandomDirectivePrompt", function(err, res){
@@ -13,9 +13,9 @@ Template.directivePromptView.onCreated(function(){
 	});
 })
 AutoForm.hooks({
-	userCapture:{
-		onSubmit(err, doc, curr){
-			console.log(err, doc, curr)
+	newUserCapture: {
+		onSuccess(doc) {
+			Session.set("isCapturing", false);
 		}
 	}
 })
@@ -29,7 +29,7 @@ Template.directivePromptView.helpers({
 		return Template.instance().randomCapture.get();
 	},
 	isCapturing(){
-		return Template.instance().isCapturing.get();
+		return Session.get("isCapturing");
 	},
 	journeyId() {
 		return FlowRouter.getParam('journeyId')
@@ -37,9 +37,11 @@ Template.directivePromptView.helpers({
 	dirImage(){
 		let dt = DirectiveTypes.findOne({_id: Template.instance().directiveId.get()})
 		if(dt){
-			console.log(Images.findOne({_id: dt.iconId}))
 			return Images.findOne({_id: dt.iconId})
 		}
+	},
+	dirType(){
+		return DirectiveTypes.findOne({_id: Template.instance().directiveId.get()}) && DirectiveTypes.findOne({_id: Template.instance().directiveId.get()}).name;
 	}
 })
 
@@ -52,7 +54,7 @@ Template.directivePromptView.events({
 		});
 	},
 	"click [data-new-capture]" (e, t){
-		t.isCapturing.set(true)
+		Session.set("isCapturing", true)
 		/*let self = t;
 		Meteor.call("getRandomCapturePrompt", function(err, res){
 			self.randomCapture.set(res);
