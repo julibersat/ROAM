@@ -41,3 +41,4 @@ fortawesome:fontawesome
 iron:router
 ostrio:autoform-files
 ostrio:files
+momentjs:moment

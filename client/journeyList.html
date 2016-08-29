@@ -2,11 +2,12 @@
 <h1>Journey List</h1>
 <hr>
 {{#each currentUser.userJourneys}}
-<h1>{{journeyType}}{{timeStart}} - {{timeEnd}}</h1>
+<h1>{{journeyName}}</h1>
+<h2>{{journeyType}}{{timeStart}} - {{timeEnd}}</h2>
 <div class="row">
 {{#each userCaptures}}
 <div class="col-md-4">
-<h1>{{directiveText}}</h1>
+<h3>{{directiveText}}</h3>
 <p>{{#each tags}}{{.}}{{/each}}</p>
 <img src="{{captureImage.link}}" class="img-responsive">
 </div>

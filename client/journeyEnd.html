@@ -1,3 +1,19 @@
 <template name="journeyEndView">
 <h1>Journey End</h1>
+{{#autoForm type="update" id="nameJourney" collection="UserJourneys" doc=.}}
+{{> afQuickField name="journeyName"}}
+<button class="btn btn-primary" type="submit">Finish!</button>
+{{/autoForm}}
+{{#with journey}}
+<h1>{{journeyType}}{{timeStart}} - {{timeEnd}}</h1>
+<div class="row">
+{{#each userCaptures}}
+<div class="col-md-4">
+<h1>{{directiveText}}</h1>
+<p>{{#each tags}}{{.}}{{/each}}</p>
+<img src="{{captureImage.link}}" class="img-responsive">
+</div>
+{{/each}}
+</div>
+{{/with}}
 </template>
