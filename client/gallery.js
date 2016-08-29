@@ -3,3 +3,7 @@ Template.galleryView.helpers({
 		return UserJourneys.find({});
 	}
 })
+
+Template.galleryView.onRendered(function(){
+	
+})
