@@ -9,7 +9,7 @@ module.exports = {
   },
 
   meteor: {
-    name: 'DentonRadio',
+    name: 'ROAM',
     path: '../',
     servers: {
       one: {},
@@ -19,8 +19,15 @@ module.exports = {
     },
     dockerImage: 'abernix/meteord:base',
     env: {
-      ROOT_URL: 'http://dentonradio.com',
-      MONGO_URL: 'mongodb://mongodb.dentonradio.com/wyvaT9en'
+      ROOT_URL: 'http://staging.roamgetlost.com',
+      MONGO_URL: 'mongodb://localhost/meteor'
     },
-  }
+  },
+  mongo: { // optional
+    oplog: true,
+    port: 27017,
+    servers: {
+      one: {},
+    },
+  },
 };
