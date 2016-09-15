@@ -6,9 +6,11 @@
 <div id="content">
 {{> Template.dynamic template=main}}
 </div>
+{{#if currentUser.activeJourney}}
 <div id="footer">
     <a class="about" href="index_about.html">ABOUT</a>
     <a class="play" href="index_caution.html">PLAY</a>
     <a class="gallery" href="roam_gallery.html">GALLERY</a>
   </div>
+  {{/if}}
 </template>
