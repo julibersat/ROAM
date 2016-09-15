@@ -20,9 +20,8 @@ Template.directivePromptView.onCreated(function(){
 AutoForm.hooks({
 	newUserCapture: {
 		onSuccess(doc) {
-			var uj = UserJourneys.findOne({_id: FlowRouter.getParam("journeyId")})
-			if(uj.timeLeft() < 0){
-				FlowRouter.go("journeyEnd", {journeyId: FlowRouter.getParam('journeyId')})
+			if(Meteor.user().activeJourney.timeLeft() < 0){
+				FlowRouter.go("journeyEnd")
 			}
 			else {
 				Meteor.call("getRandomDirectivePrompt", function(err, res){
@@ -48,12 +47,6 @@ Template.directivePromptView.helpers({
 	},
 	isCapturing(){
 		return Session.get("isCapturing");
-	},
-	journeyId() {
-		return FlowRouter.getParam('journeyId')
-	},
-	userJourney() {
-		return UserJourneys.findOne({_id: FlowRouter.getParam('journeyId')})
 	},
 	dirImage(){
 		let dt = DirectiveTypes.findOne({_id: Template.instance().directiveId.get()})

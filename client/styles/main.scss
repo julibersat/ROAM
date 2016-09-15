@@ -25,10 +25,14 @@ html, body {
 .time-pull-out {
 	position:fixed;
 	top:100px;
-	right:0;
+	right:-60px;
 	height:55px;
 	padding:17px;
 	background-color:$dark-grey;
 	color:$lite-grey;
 	border-radius:25px 0 0 25px;
+	transition: right .5s;
+	&:hover {
+		right: 0px;
+	}
 }
