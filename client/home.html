@@ -1,10 +1,9 @@
 <template name="homeView">
-{{#unless currentUser}}
 <h1>ROAM</h1>
+{{#unless currentUser}}
 <hr>
 {{> atForm}}
 {{else}}
-<a href="{{pathFor 'safetyClause'}}">Go to Safety</a>
-<a href="{{pathFor 'journeyList'}}">My Journeys</a>
+
 {{/unless}}
 </template>

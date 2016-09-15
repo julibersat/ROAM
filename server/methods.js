@@ -28,5 +28,14 @@ Meteor.methods({
 		let randIndex = Math.floor(Math.random() * dirArray.length);
 		let randDir = dirArray[randIndex];
 		return randDir.text;
+	},
+	signSafety(){
+		console.log("calling")
+		if(!this.userId) return;
+		Meteor.users.update({_id: this.userId}, {$set: {hasSignedSafety: true}})
+	},
+	signLiability(){
+		if(!this.userId) return;
+		Meteor.users.update({_id: this.userId}, {$set: {hasSignedLiability: true}})
 	}
 })

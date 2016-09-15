@@ -16,8 +16,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       <li class="{{isActiveRoute 'about'}}"><a href="{{pathFor 'about'}}">About</a></li>
+      {{#if currentUser}}
       <li class="{{isActiveRoute 'journeyOptions'}}"><a href="{{pathFor 'journeyOptions'}}">New Journey</a></li>
         <li class="{{isActiveRoute 'journeyList'}}"><a href="{{pathFor 'journeyList'}}">My Journeys <span class="sr-only">(current)</span></a></li>
+        {{/if}}
         <li class="{{isActiveRoute 'gallery'}}"><a href="{{pathFor 'gallery'}}">Gallery</a></li>
       </ul>
       {{#if currentUser}}

@@ -1,7 +1,15 @@
 <template name="journeyOptionsView">
+{{#unless currentUser.hasSignedSafety}}
+{{> safetyClauseView}}
+{{else}}
+{{#unless currentUser.hasSignedLiability}}
+{{> liabilityAgreementView}}
+{{else}}
 <h1>Journey Options</h1>
 {{#autoForm type="insert" collection="UserJourneys" id="newJourney"}}
 {{> afQuickField name="duration"}}
 <button class="btn btn-primary" type="submit">Submit</button>
 {{/autoForm}}
+{{/unless}}
+{{/unless}}
 </template>
