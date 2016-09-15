@@ -1,10 +1,11 @@
 <template name="journeyEndView">
 <h1>Journey End</h1>
-{{#autoForm type="update" id="nameJourney" collection="UserJourneys" doc=.}}
+{{#with journey}}
+{{#autoForm type="method-update" meteormethod="nameJourney" id="nameJourney" collection="UserJourneys" doc=this}}
 {{> afQuickField name="journeyName"}}
 <button class="btn btn-primary" type="submit">Finish!</button>
 {{/autoForm}}
-{{#with journey}}
+
 <h1>{{journeyType}}{{timeStart}} - {{timeEnd}}</h1>
 <div class="row">
 {{#each userCaptures}}

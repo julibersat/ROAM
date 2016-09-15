@@ -21,3 +21,14 @@ html, body {
 }
 
 @import 'old.scss';
+
+.time-pull-out {
+	position:fixed;
+	top:100px;
+	right:0;
+	height:55px;
+	padding:17px;
+	background-color:$dark-grey;
+	color:$lite-grey;
+	border-radius:25px 0 0 25px;
+}

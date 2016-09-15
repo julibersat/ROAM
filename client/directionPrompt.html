@@ -1,5 +1,4 @@
 <template name="directivePromptView">
-<h1>Time Left: {{timeLeft}}</h1>
 {{#if isCapturing}}
 <h1>{{getRandomCapturePrompt}}</h1>
 {{#autoForm collection="UserCaptures" type="insert" id="newUserCapture"}}

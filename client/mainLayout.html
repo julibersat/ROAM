@@ -1,16 +1,12 @@
 <template name="mainLayout">
+{{#unless currentUser.activeJourney}}
 {{> navbar}}
-{{#if currentUser.hasActiveJourney}}
-<div class="ressection resgroup"><div class="rescol resspan_1_of_2" style="text-align: left;"><div>2016.09.14 23:24:58</div><div>--:--:--</div></div><div class="rescol resspan_1_of_2" style="text-align: right;"><div>66.54.38 S | 126.12.36 E</div><div>0 <img src="assets/direction_white_icon.png" style="width:20px;height:20px"> 0 <img src="assets/capture_white_icon.png" style="width:20px;height:20px"> </div></div></div>
-{{/if}}
+{{else}}
+{{#unless isActiveRoute 'journeyEnd'}}
+{{> rightNav}}
+{{/unless}}
+{{/unless}}
 <div id="content">
 {{> Template.dynamic template=main}}
 </div>
-{{#if currentUser.activeJourney}}
-<div id="footer">
-    <a class="about" href="index_about.html">ABOUT</a>
-    <a class="play" href="index_caution.html">PLAY</a>
-    <a class="gallery" href="roam_gallery.html">GALLERY</a>
-  </div>
-  {{/if}}
 </template>

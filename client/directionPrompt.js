@@ -5,12 +5,8 @@ Template.directivePromptView.onCreated(function(){
 	this.randomCapture = new ReactiveVar(false);
 	this.isCapturing = Session.get("isCapturing");
 	this.directiveId = new ReactiveVar(false);
-	this.timeLeft = new ReactiveVar(false);
+
 	let self = this;
-	window.setInterval(function(){
-		let tl = UserJourneys.findOne({_id: FlowRouter.getParam("journeyId")}).timeLeft()
-		self.timeLeft.set(tl);
-	}, 1000)
 	Meteor.call("getRandomDirectivePrompt", function(err, res){
 		console.log("toot", err, res)
 		self.randomDirective.set(res.text);
@@ -67,15 +63,6 @@ Template.directivePromptView.helpers({
 	},
 	dirType(){
 		return DirectiveTypes.findOne({_id: Template.instance().directiveId.get()}) && DirectiveTypes.findOne({_id: Template.instance().directiveId.get()}).name;
-	},
-	timeLeft(){
-		let timeLeft = Template.instance().timeLeft.get();
-		if(timeLeft > 0) {
-			return Template.instance().timeLeft.get();
-		}
-		else {
-			return "Finish this last capture to complete your journey!"
-		}
 	}
 })
 
