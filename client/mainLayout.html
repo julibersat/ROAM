@@ -1,36 +1,11 @@
 <template name="mainLayout">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{pathFor 'home'}}">ROAM</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      <li class="{{isActiveRoute 'about'}}"><a href="{{pathFor 'about'}}">About</a></li>
-      {{#if currentUser}}
-      <li class="{{isActiveRoute 'journeyOptions'}}"><a href="{{pathFor 'journeyOptions'}}">New Journey</a></li>
-        <li class="{{isActiveRoute 'journeyList'}}"><a href="{{pathFor 'journeyList'}}">My Journeys <span class="sr-only">(current)</span></a></li>
-        {{/if}}
-        <li class="{{isActiveRoute 'gallery'}}"><a href="{{pathFor 'gallery'}}">Gallery</a></li>
-      </ul>
-      {{#if currentUser}}
-      <ul class="nav navbar-nav navbar-right">
-        <li><a data-logout>Logout</a></li>
-      </ul>
-      {{/if}}
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div class="container" style="background-color: #b1b1b1;">
+{{> navbar}}
+<div class="ressection resgroup"><div class="rescol resspan_1_of_2" style="text-align: left;"><div>2016.09.14 23:24:58</div><div>--:--:--</div></div><div class="rescol resspan_1_of_2" style="text-align: right;"><div>66.54.38 S | 126.12.36 E</div><div>0 <img src="assets/direction_white_icon.png" style="width:20px;height:20px"> 0 <img src="assets/capture_white_icon.png" style="width:20px;height:20px"> </div></div></div>
+<div id="header"><img class="logo" src="/roam_logo_big.png"></div>
 {{> Template.dynamic template=main}}
-</div>
+<div id="footer">
+    <a class="about" href="index_about.html">ABOUT</a>
+    <a class="play" href="index_caution.html">PLAY</a>
+    <a class="gallery" href="roam_gallery.html">GALLERY</a>
+  </div>
 </template>
