@@ -26,7 +26,7 @@
       {{#if currentUser}}
         <li><a data-logout>Logout</a></li>
       {{else}}
-      <li><a href="{{pathFor 'signIn'}}">Sign In</a></li>
+      <li class="{{isActiveRoute 'signIn'}}"><a href="{{pathFor 'signIn'}}">Sign In</a></li>
       {{/if}}
       </ul>
     </div><!-- /.navbar-collapse -->
