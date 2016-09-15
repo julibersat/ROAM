@@ -22,11 +22,13 @@
         {{/if}}
         <li class="{{isActiveRoute 'gallery'}}"><a href="{{pathFor 'gallery'}}">Gallery</a></li>
       </ul>
-      {{#if currentUser}}
       <ul class="nav navbar-nav navbar-right">
+      {{#if currentUser}}
         <li><a data-logout>Logout</a></li>
-      </ul>
+      {{else}}
+      <li><a href="{{pathFor 'signIn'}}">Sign In</a></li>
       {{/if}}
+      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

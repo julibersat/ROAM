@@ -1,5 +1,7 @@
-@import '{reywood:bootstrap3-sass}/bootstrap';
 @import 'colors.scss';
+$navbar-default-bg: $lite-grey;
+
+@import '{reywood:bootstrap3-sass}/bootstrap';
 //main styles here
 @font-face {
 	font-family: RoamFont;
@@ -14,6 +16,6 @@ html, body {
 	overflow: hidden;
 	text-align: center;
 	font-family: RoamFont, Arial;
-	background-color: $lite-grey;
+	background-color: $medium-grey;
 }
 @import 'old.scss';
