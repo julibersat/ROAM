@@ -20,7 +20,7 @@ Template.directivePromptView.onCreated(function(){
 AutoForm.hooks({
 	newUserCapture: {
 		onSuccess(doc) {
-			if(Meteor.user().activeJourney.timeLeft() < 0){
+			if(Meteor.user().activeJourney().timeLeft() < 0){
 				FlowRouter.go("journeyEnd")
 			}
 			else {
