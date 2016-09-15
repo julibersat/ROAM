@@ -2,9 +2,10 @@ Template.rightNav.onCreated(function(){
 	this.timeLeft = new ReactiveVar(false);
 	let self = this;
 	window.setInterval(function(){
-		if(Meteor.user() && Meteor.user().activeJourney())
-		let tl = Meteor.user().activeJourney().timeLeft();
-		self.timeLeft.set(tl);
+		if(Meteor.user() && Meteor.user().activeJourney()){
+			let tl = Meteor.user().activeJourney().timeLeft();
+			self.timeLeft.set(tl);
+		}
 	}, 1000)
 })
 
