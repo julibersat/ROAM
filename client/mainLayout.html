@@ -1,12 +1,9 @@
 <template name="mainLayout">
-{{#unless currentUser.activeJourney}}
-{{> navbar}}
-{{else}}
-{{#unless isActiveRoute 'journeyEnd'}}
 {{> rightNav}}
-{{/unless}}
-{{/unless}}
 <div id="content">
 {{> Template.dynamic template=main}}
+</div>
+<div class="bottom-street">
+
 </div>
 </template>

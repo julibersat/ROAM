@@ -1,4 +1,7 @@
 <template name="homeView">
 <div id="header"><img class="logo" src="/roam_logo_big.png"></div>
-<img src="/forward-arrow-icon.png">
+{{#if currentUser}}
+<a href="{{pathFor 'journeyOptions'}}">Start Game</a>
+{{else}}
+<a data-start-game href="{{pathFor 'signIn'}}">Start Game</a>{{/if}}
 </template>

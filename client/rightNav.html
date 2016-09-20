@@ -1,5 +1,12 @@
 <template name="rightNav">
-<div class="time-pull-out">
-	{{timeLeft}} - <a href="" data-stop-journey>Stop</a>
+<div class="pull-out time-pull-out">
+	nav {{timeLeft}} - <a href="" data-stop-journey>Stop</a>
+	<div class="nav-pull-out">
+	<a href="{{pathFor 'journeyOptions'}}">New Journey</a>
+	<a href="{{pathFor 'gallery'}}">Gallery</a>
+	</div>
+</div>
+<div class="pull-out refresh-pull-out">
+	nav {{timeLeft}} - <a href="" data-stop-journey>Stop</a>
 </div>
 </template>

@@ -1,15 +1,15 @@
 module.exports = {
   servers: {
     one: {
-      host: '67.205.134.184',
+      host: '159.203.98.172',
       username: 'root',
-      password: 'Passw0rd',
+      password: 'kl0n0likespen15',
       // pem: './mykey',
     },
   },
 
   meteor: {
-    name: 'ROAM',
+    name: 'roam',
     path: '../',
     servers: {
       one: {},
@@ -19,15 +19,8 @@ module.exports = {
     },
     dockerImage: 'abernix/meteord:base',
     env: {
-      ROOT_URL: 'http://staging.roamgetlost.com',
+      ROOT_URL: 'http://roamgetlost.com',
       MONGO_URL: 'mongodb://localhost/meteor'
     },
-  },
-  mongo: { // optional
-    oplog: true,
-    port: 27017,
-    servers: {
-      one: {},
-    },
-  },
+  }
 };

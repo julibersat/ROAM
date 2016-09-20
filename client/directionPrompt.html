@@ -3,7 +3,10 @@
 <h1>{{getRandomCapturePrompt}}</h1>
 {{#autoForm collection="UserCaptures" type="insert" id="newUserCapture"}}
 {{> afQuickField name="captureImageId"}}
-{{> afQuickField name="tags"}}
+<p>Use 3 words to describe this</p>
+{{> afFieldInput name="tags.0"}}
+{{> afFieldInput name="tags.1"}}
+{{> afFieldInput name="tags.2"}}
 {{> afFieldInput name="userJourneyId" value=currentUser.activeJourney._id type="hidden"}}
 {{> afFieldInput name="directiveType" value=dirType type="hidden"}}
 {{> afFieldInput name="directiveText" value=getRandomDirectivePrompt type="hidden"}}
