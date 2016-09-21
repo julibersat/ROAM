@@ -1,8 +1,32 @@
 <template name="galleryView">
+<div style="height:100%;">
 <h1>Gallery</h1>
-{{#each userJourneys}}
+<a href="" data-search-captures>Captures</a> <a href="" data-search-journeys>Journeys</a> <a href="" data-my-history>History</a>
+{{#if $eq currentNav 'captures'}}
+{{> EasySearch.Input index=userCapturesIndex }}
+	{{#EasySearch.Each index=userCapturesIndex }}
+	{{#with capture}}
+	<h1>{{#each tags}}{{.}} {{/each}} @ {{prettifyDate createdAt}}</h1>
+    <img src="{{captureImage.link}}">
+   {{/with}}
+  {{/EasySearch.Each}}
+{{/if}}
+{{#if $eq currentNav 'journeys'}}
+{{> EasySearch.Input index=userJourneysIndex }}
+	{{#EasySearch.Each index=userJourneysIndex }}
+	{{#with journey}}
+	<h1>{{journeyName}}</h1>
+<h2>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
+	{{> journeyCarousel}}
+	{{/with}}
+  {{/EasySearch.Each}}
+{{/if}}
+{{#if $eq currentNav 'history'}}
+{{#each currentUser.userJourneys}}
 <h1>{{journeyName}}</h1>
-<h2>{{journeyType}}{{timeStart}} - {{timeEnd}}</h2>
+<h2>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
 {{> journeyCarousel}}
 {{/each}}
+{{/if}}
+</div>
 </template>
