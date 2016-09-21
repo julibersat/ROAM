@@ -1,19 +1,19 @@
-<template name="journeyOptionsView">
-<div class="frostyborder" style="max-width:500px;">
-<div class="frostybox">
+<template name="journeyOptionsView">>
 {{#unless currentUser.hasSignedSafety}}
 {{> safetyClauseView}}
 {{else}}
 {{#unless currentUser.hasSignedLiability}}
 {{> liabilityAgreementView}}
 {{else}}
+<div class="frostyborder" style="max-width:500px;">
+<div class="frostybox">
 <h1>Journey Options</h1>
 {{#autoForm type="insert" collection="UserJourneys" id="newJourney"}}
 {{> afQuickField name="duration" class="input-lg"}}
 <button class="btn btn-primary" type="submit">Submit</button>
 {{/autoForm}}
-{{/unless}}
-{{/unless}}
 </div>
 </div>
+{{/unless}}
+{{/unless}}
 </template>
