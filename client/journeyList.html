@@ -4,7 +4,7 @@
 {{#each currentUser.userJourneys}}
 <div>
 <h1>{{journeyName}}</h1>
-<h2>{{journeyType}}{{timeStart}} - {{timeEnd}}</h2>
+<h2>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
 <div class="row">
 {{#each userCaptures}}
 <div class="col-md-4">

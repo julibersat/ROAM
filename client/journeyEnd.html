@@ -6,7 +6,8 @@
 <button class="btn btn-primary" type="submit">Finish!</button>
 {{/autoForm}}
 
-<h1>{{journeyType}}{{timeStart}} - {{timeEnd}}</h1>
+<h1>{{journeyType}}</h1>
+<p>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</p>
 <div class="row">
 {{#each userCaptures}}
 <div class="col-md-4">

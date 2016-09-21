@@ -21,6 +21,26 @@ html, body {
 
 @import 'old.scss';
 
+#__blaze-root {
+	width:100%;
+	height:100%;
+}
+
+.bottom-street hr{
+  border:none;
+  border-top:4px dashed #fbbb18;
+  height:3px;
+  transform:translateY(100%);
+}
+
+.main-content {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	height:100%;
+	justify-content:center;
+}
+
 .pull-out {
 	position:fixed;
 	padding:17px;
@@ -30,6 +50,7 @@ html, body {
 	&:hover {
 		right: 0px;
 	}
+	z-index:9999;
 }
 
 .time-pull-out {
