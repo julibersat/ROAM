@@ -63,7 +63,6 @@ Template.directivePromptView.events({
 	"click [data-new-directive]" (e, t){
 		let self = t;
 		Meteor.call("getRandomDirectivePrompt", function(err, res){
-			console.log(err, res)
 			self.randomDirective.set(res.text);
 			self.directiveId.set(res._id);
 		});

@@ -42,3 +42,7 @@ useraccounts:bootstrap
 zimme:active-route
 session
 useraccounts:flow-routing
+service-configuration
+accounts-facebook
+easy:search
+raix:handlebar-helpers
