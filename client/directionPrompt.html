@@ -3,8 +3,17 @@
 {{#if isCapturing}}
 {{> capturePrompt}}
 {{else}}
-<img src="{{dirImage.link}}" style="max-height:60%;margin-left:auto;margin-right:auto;">
-<h1>{{getRandomDirectivePrompt}}</h1>
-<button class="btn btn-primary" data-new-capture>Capture</button>
+<div class="pull-out refresh-pull-out">
+<a href="" data-new-directive><img style="height:100%;" src="/refresh.svg"></a>
+</div>
+{{#if $eq $.App.currentDirectivePrompt.get.type "Distance"}}
+<div data-new-capture class="frostyborder" style="max-width:500px;">
+<div class="frostybox">
+<h1>{{$.App.currentDirectivePrompt.get.randVerb}}<br><span style="font-size:2.2em;">{{$.App.currentDirectivePrompt.get.randNum}}</span><br>{{$.App.currentDirectivePrompt.get.unit}}</h1>
+</div>
+</div>
+{{else}}
+<img data-new-capture src="{{$.App.currentDirectiveVerbImage}}" style="max-height:60%;margin-left:auto;margin-right:auto;">
+{{/if}}
 {{/if}}
 </template>

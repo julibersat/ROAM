@@ -1,11 +1,19 @@
 <template name="capturePrompt">
 {{#autoForm collection="UserCaptures" type="insert" id="newUserCapture"}}
+<div style="display:none;">
+{{> afFieldInput name="captureImageId" id="capture-image"}}
+</div>
+{{#unless hasImageUpload}}
 <div class="frostyborder" style="max-width:500px;">
 <div class="frostybox">
-<h1>{{$.App.currentCapturePrompt}}</h1>
+<h1>{{$.App.currentCapturePrompt.get.text}}</h1>
 </div>
 </div>
-{{> afQuickField name="captureImageId"}}
+<div style="position:fixed;bottom:30px;left:50%; transform: translateX(-50%);width:35px;height:85px;z-index:9999;"  data-capture-image>
+<img class="img-responsive" src="/marker.svg" />
+</div>
+{{else}}
+
 <div class="frostyborder" style="max-width:500px;">
 <div class="frostybox">
 <p>Use 3 words to describe this</p>
@@ -18,6 +26,7 @@
 <button class="btn btn-primary" type="submit">Submit</button>
 </div>
 </div>
+{{/unless}}
 {{/autoForm}}
 </template>
 

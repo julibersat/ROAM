@@ -18,11 +18,11 @@ Meteor.methods({
 			let verbArray = DirectionVerbs.find().fetch()
 			let randIndexVerb = Math.floor(Math.random() * verbArray.length);
 			randVerb = verbArray[randIndexVerb];
-			verbName = randVerb.name;
-			unitName = randUnit.name;
+			verbName = randVerb.text;
+			unitName = randUnit.text;
 		}
 
-		return {unit: unitName, randVerb: verbName, directiveTypeId: randDir._id, randNum: randNum};
+		return {unit: unitName, randVerb: verbName, directiveTypeId: randDir._id, randNum: randNum, type: dirName};
 	},
 	getRandomCapturePrompt() {
 		let capArray = CapturePrompts.find().fetch()

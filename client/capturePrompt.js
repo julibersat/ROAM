@@ -1,10 +1,12 @@
 Template.capturePrompt.events({
-
+	"click [data-capture-image]"(){
+		$('#capture-image').next().click()
+	}
 })
 
 Template.capturePrompt.helpers({
 	hasImageUpload(){
-		//AutoForm.captureImageId
+		return AutoForm.getFieldValue("newUserCapture", "captureImageId");
 	}
 })
 
