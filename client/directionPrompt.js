@@ -1,9 +1,3 @@
-var instance;
-
-Template.directivePromptView.onCreated(function(){
-	instance = this;
-})
-
 Template.directivePromptView.helpers({
 	isCapturing(){
 		return Session.get("isCapturing");
