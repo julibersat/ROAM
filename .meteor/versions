@@ -20,7 +20,7 @@ binary-heap@1.0.9
 blaze@2.1.9
 blaze-html-templates@1.0.5
 blaze-tools@1.0.10
-boilerplate-generator@1.0.9
+boilerplate-generator@1.0.10
 caching-compiler@1.1.7
 caching-html-compiler@1.0.7
 callback-hook@1.0.9
@@ -57,12 +57,9 @@ jquery@1.11.9
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.12.1
 launch-screen@1.0.12
-less@2.7.5
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.15
-matb33:bootstrap-base@10.0.0
-matb33:bootstrap-glyphicons@10.0.0
 mdg:validation-error@0.5.1
 meteor@1.2.17
 meteor-base@1.0.4
@@ -73,7 +70,7 @@ mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.7.6
 modules-runtime@0.7.6
-momentjs:moment@2.15.0
+momentjs:moment@2.15.1
 mongo@1.1.12
 mongo-id@1.0.5
 npm-bcrypt@0.9.1

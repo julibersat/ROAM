@@ -32,6 +32,9 @@ Template.galleryView.helpers({
 	},
 	journey(){
 		return UserJourneys.findOne({_id: this._id})
+	},
+	isActive(section) {
+		return (section === Template.instance().currentNav.get() ? "active":"")
 	}
 })
 
