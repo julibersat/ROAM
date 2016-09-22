@@ -46,3 +46,4 @@ service-configuration
 accounts-facebook
 easy:search
 raix:handlebar-helpers
+reactive-dict

@@ -11,13 +11,7 @@ Template.rightNav.onCreated(function(){
 
 Template.rightNav.helpers({
 	timeLeft(){
-		let timeLeft = Template.instance().timeLeft.get();
-		if(timeLeft > 0 || timeLeft === false) {
-			return Template.instance().timeLeft.get();
-		}
-		else {
-			return "Finish this last capture to complete your journey!"
-		}
+		return Template.instance().timeLeft.get();
 	}
 })
 

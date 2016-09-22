@@ -1,3 +1,27 @@
+<template name="capturePrompt">
+{{#autoForm collection="UserCaptures" type="insert" id="newUserCapture"}}
+<div class="frostyborder" style="max-width:500px;">
+<div class="frostybox">
+<h1>{{$.App.currentCapturePrompt}}</h1>
+</div>
+</div>
+{{> afQuickField name="captureImageId"}}
+<div class="frostyborder" style="max-width:500px;">
+<div class="frostybox">
+<p>Use 3 words to describe this</p>
+{{> afFieldInput name="tags.0"}}
+{{> afFieldInput name="tags.1"}}
+{{> afFieldInput name="tags.2"}}
+{{> afFieldInput name="userJourneyId" value=currentUser.activeJourney._id type="hidden"}}
+{{> afFieldInput name="directiveType" value=dirType type="hidden"}}
+{{> afFieldInput name="directiveText" value=getRandomDirectivePrompt type="hidden"}}
+<button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</div>
+{{/autoForm}}
+</template>
+
+
 <template name="capturePromptView">
 <h1>Capture Prompt</h1>
 </template>

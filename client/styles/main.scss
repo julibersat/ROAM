@@ -15,7 +15,7 @@ html, body {
 	margin: 0;
 	text-align: center;
 	font-family: RoamFont, Arial;
-	background-color: $medium-grey;
+	background-color: $other-grey;
 	color: $dark-grey;
 }
 
@@ -43,7 +43,7 @@ html, body {
 
 .pull-out {
 	position:fixed;
-	padding:17px;
+	padding:10px;
 	height:55px;
 	border-radius:25px 0 0 25px;
 	transition: right .5s;
@@ -56,15 +56,16 @@ html, body {
 .time-pull-out {
 	top:100px;
 	right:-60px;
-	background-color:$dark-grey;
-	color:$lite-grey;
+	background-color:$yellow;
+	color:$dark-grey;
 	
 }
 
 .refresh-pull-out {
-	top:140px;
-	right:-60px;
-	background-color:$yellow;
+	top:170px;
+	right:0;
+	width:71px;
+	background-color:$dark-grey;
 	color:$lite-grey;
 }
 

@@ -1,4 +1,5 @@
-<template name="journeyOptionsView">>
+<template name="journeyOptionsView">
+{{> mapBG}}
 {{#unless currentUser.hasSignedSafety}}
 {{> safetyClauseView}}
 {{else}}
@@ -7,11 +8,13 @@
 {{else}}
 <div class="frostyborder" style="max-width:500px;">
 <div class="frostybox">
-<h1>Journey Options</h1>
+<h1>GET LOST<br>FOR<br>
 {{#autoForm type="insert" collection="UserJourneys" id="newJourney"}}
-{{> afQuickField name="duration" class="input-lg"}}
-<button class="btn btn-primary" type="submit">Submit</button>
+{{> afFieldInput name="duration" class="input-lg"}}
+DURATION<br>
+<button style="width:100%;" class="btn btn-primary" type="submit">I'm Ready!</button>
 {{/autoForm}}
+</h1>
 </div>
 </div>
 {{/unless}}
