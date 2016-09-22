@@ -1,7 +1,7 @@
 AutoForm.hooks({
 	nameJourney: {
 		onSuccess(doc){
-			FlowRouter.go("journeyList")
+			FlowRouter.go("gallery")
 		}
 	}
 })

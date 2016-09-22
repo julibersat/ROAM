@@ -5,6 +5,10 @@ Template.capturePrompt.onCreated(function(){
 	}, 1000)
 })
 
+Template.capturePrompt.onDestroyed(function(){
+	window.clearInterval(this.clock);
+})
+
 Template.capturePrompt.events({
 	"click [data-capture-image]"(){
 		$('#capture-image').next().click()
@@ -27,7 +31,7 @@ AutoForm.hooks({
 		},
 		onSuccess(doc) {
 			Session.set("isCapturing", false);
-			if(Meteor.user().activeJourney().timeLeft() < 0){
+			if(Meteor.user().activeJourney().timeLeft() == "Times up!"){
 				FlowRouter.go("journeyEnd")
 			}
 			else {

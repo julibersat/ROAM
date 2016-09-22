@@ -11,6 +11,7 @@ $navbar-default-bg: $lite-grey;
 html, body {
 	width: 100%;
 	height: 100%;
+	overflow:auto;
 	padding: 0;
 	margin: 0;
 	text-align: center;
@@ -38,6 +39,7 @@ html, body {
 	flex-direction:column;
 	width:100%;
 	height:100%;
+	padding-bottom:30px;
 	justify-content:center;
 }
 

@@ -1,0 +1,12 @@
+Template.atTemp.onCreated(function(){
+	this.autorun(()=>{
+		if(Meteor.user()){
+			if(Session.get("startNewGame")){
+				FlowRouter.go("journeyOptions");
+			}
+			else{
+				FlowRouter.go("home")
+			}
+		}
+	})
+})

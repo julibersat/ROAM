@@ -1,4 +1,5 @@
 <template name="journeyEndView">
+<div style='height:100%;overflow:auto;'>
 <h1>Journey End</h1>
 {{#with currentUser.activeJourney}}
 {{#autoForm type="method-update" meteormethod="nameJourney" id="nameJourney" collection="UserJourneys" doc=this}}
@@ -18,4 +19,5 @@
 {{/each}}
 </div>
 {{/with}}
+</div>
 </template>

@@ -1,6 +1,6 @@
 Template.mainNav.helpers({
 	displayMainNav(){
-		if(FlowRouter.getRouteName() !== "directivePrompt"){
+		if(FlowRouter.getRouteName() !== "roamingGame"){
 			return true;
 		}
 	}

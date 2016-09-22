@@ -41,7 +41,6 @@ reywood:bootstrap3-sass
 useraccounts:bootstrap
 zimme:active-route
 session
-useraccounts:flow-routing
 service-configuration
 accounts-facebook
 easy:search

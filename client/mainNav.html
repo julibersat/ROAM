@@ -7,7 +7,7 @@
 	<a href="{{pathFor 'gallery'}}">Gallery</a>
 	<a href="{{pathFor 'about'}}">About</a>
 	{{#if currentUser}}
-   <a data-logout>Logout</a>
+   <a href="{{pathFor 'home'}}" data-logout>Logout</a>
   {{else}}
   <a href="{{pathFor 'signIn'}}">Sign In</a>
   {{/if}}

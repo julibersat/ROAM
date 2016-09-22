@@ -1,4 +1,4 @@
-Template.directivePromptView.helpers({
+Template.roamingGameView.helpers({
 	isCapturing(){
 		return Session.get("isCapturing");
 	},
@@ -7,7 +7,7 @@ Template.directivePromptView.helpers({
 	},
 })
 
-Template.directivePromptView.events({
+Template.roamingGameView.events({
 	"click [data-new-directive]" (e, t){
 		let self = t;
 		App.newDirectivePrompt();
