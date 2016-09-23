@@ -1,4 +1,4 @@
-ServiceConfiguration.configurations.upsert(
+/*ServiceConfiguration.configurations.upsert(
   { service: "facebook" },
   {
     $set: {
@@ -6,4 +6,4 @@ ServiceConfiguration.configurations.upsert(
       secret: "1315f7b514ed840e9cfcba2ac8380d12"
     }
   }
-);
+);*/

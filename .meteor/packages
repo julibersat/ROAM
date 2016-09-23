@@ -41,7 +41,6 @@ useraccounts:bootstrap
 zimme:active-route
 session
 service-configuration
-accounts-facebook
 easy:search
 raix:handlebar-helpers
 reactive-dict

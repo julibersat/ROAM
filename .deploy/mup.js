@@ -14,9 +14,9 @@ module.exports = {
     servers: {
       one: {},
     },
-    buildOptions: {
+//    buildOptions: {
 //      serverOnly: true
-    },
+ //   },
     dockerImage: 'abernix/meteord:base',
     env: {
       ROOT_URL: 'http://roamgetlost.com',
