@@ -11,7 +11,7 @@ a{
 
 .logo{
 	width: 100%;
-	max-width: 500px;
+	max-width: 50rem;
 }
 
 
@@ -21,15 +21,15 @@ a{
 	bottom: 0;
 	left: 0;
 	background: #585858;
-	height: 40px;
+	height: 4rem;
 	width: 100%;
     font-size: 14pt;
 }
 
 #footer a{
 	display: inline-block;
-	height: 40px;
-	line-height: 40px;
+	height: 4rem;
+	line-height: 4rem;
 	width: 33%;
 	margin: 0;
 	padding: 0;
@@ -41,18 +41,18 @@ a{
 }
 #footer > a > .compass{
 	display: inline-block;
-	height: 60px;
-	width: 65px;
+	height: 6rem;
+	width: 6.5rem;
 	background: url('assets/direction_white_icon.png') center no-repeat;
-	margin-top: -30px;
+	margin-top: -3rem;
 	background-size: 100% auto;
 }
 #footer > a > .shutter{
 	display: inline-block;
-	height: 60px;
-	width: 65px;
+	height: 6rem;
+	width: 6.5rem;
 	background: url('assets/capture_white_icon.png') center no-repeat;
-	margin-top: -30px;
+	margin-top: -3rem;
 	background-size: 100% auto;
 }
 
@@ -97,36 +97,35 @@ a{
 /* FrostyBox */
 .frostyborder {
 	box-sizing: border-box;
-	border: 12px solid rgba(239, 239, 239, 0.8);
-	border-radius: 24px;
-	padding: 5px;
+	border: 1.2rem solid rgba(239, 239, 239, 0.8);
+	border-radius: 2.4rem;
+	padding: .5rem;
 	max-height:85%;
 	margin-left:auto;
 	margin-right:auto;
 	overflow:auto;
 }
 .frostyborder.small{
-	width: 250px;
+	width: 25rem;
 	height: auto;
-	margin: 20px auto 0;
+	margin: 2rem auto 0;
 }
 .frostybox {
 	box-sizing: border-box;
-	border-radius: 8px;
-	font-size: 14pt;
+	border-radius: .8rem;
 	background-color: rgba(239, 239, 239, 0.8);
 	position: relative;
-    padding: 15px 15px 15px;
+    padding: 1.5rem 1.5rem 1.5rem;
 	color: #555;
 }
 
 #capprompt.frostybox{
-	padding-bottom: 25px;
+	padding-bottom: 2.5rem;
 }
 
 .frostybox .content{
 	box-sizing: border-box;
-	padding: 0 10px;
+	padding: 0 1rem;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -142,12 +141,12 @@ a{
 .frostybox .footer a{
     width: 35%;
     display: inline-block;
-    line-height: 40px;
+    line-height: 4rem;
 }
 
 .frostyborder.terms .frostybox{
 	font-size: 12pt;
-	padding-bottom: 90px;
+	padding-bottom: 9rem;
 }
 .frostyborder.terms .frostybox .footer{
 	font-size: 14pt;
@@ -162,8 +161,8 @@ a{
 }
 .time input{
 	border: 2px solid #555;
-    padding: 2px;
-    width: 100px;
+    padding: .2rem;
+    width: 10rem;
 	background-color: #afafaf;
 	color: #333;
 	font-size: 11pt;
