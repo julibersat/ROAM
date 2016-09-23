@@ -1,5 +1,6 @@
 @import 'colors.scss';
 $navbar-default-bg: $lite-grey;
+$brand-primary: $red;
 
 @import '{reywood:bootstrap3-sass}/bootstrap';
 //main styles here
@@ -43,6 +44,10 @@ a:hover, a:focus {
   transform:translateY(100%);
 }
 
+.time-subhead {
+	margin-top: -10px;
+}
+
 .main-content {
 	display:flex;
 	flex-direction:column;
@@ -50,6 +55,17 @@ a:hover, a:focus {
 	height:100%;
 	padding-bottom:30px;
 	justify-content:center;
+}
+
+.word-input {
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.word-input input{
+	margin-bottom:5px;
+	text-align:center;
 }
 
 .pull-out {
@@ -72,6 +88,16 @@ a:hover, a:focus {
 	
 }
 
+.mainNav-pull-out {
+	top:100px;
+	right:0px;
+	background-color:$yellow;
+	color:$dark-grey;
+	a:active, a:hover, a:focus {
+		color: $dark-grey !important;
+	}
+}
+
 .refresh-pull-out {
 	top:170px;
 	right:0;
@@ -89,3 +115,4 @@ a:hover, a:focus {
 	width:100%;
 	background-color:$dark-grey;
 }
+

@@ -35,6 +35,12 @@ Template.galleryView.helpers({
 	},
 	isActive(section) {
 		return (section === Template.instance().currentNav.get() ? "active":"")
+	},
+	capturesAttr(){
+		return {placeholder: "Search captures by tag"}
+	},
+	journeysAttr(){
+		return {placeholder: "Search journeys by name"}
 	}
 })
 

@@ -1,9 +1,12 @@
 <template name="mainNav">
 {{#if displayMainNav}}
-<div class="pull-out time-pull-out">
-	|||
-	<div class="nav-pull-out">
+<div class="pull-out mainNav-pull-out">
+{{#if $.Session.get 'navOpen'}}
+<div class="">
+	<span data-close-nav>|||</span>
+	{{#if currentUser}}
 	<a href="{{pathFor 'journeyOptions'}}">Play</a>
+	{{/if}}
 	<a href="{{pathFor 'gallery'}}">Gallery</a>
 	<a href="{{pathFor 'about'}}">About</a>
 	{{#if currentUser}}
@@ -11,7 +14,10 @@
   {{else}}
   <a href="{{pathFor 'signIn'}}">Sign In</a>
   {{/if}}
-	</div>
+</div>
+{{else}}
+<span data-open-nav>|||</span>
+{{/if}}
 </div>
 {{/if}}
 </template>
