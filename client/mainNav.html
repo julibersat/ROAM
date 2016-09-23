@@ -5,14 +5,14 @@
 <div class="">
 	<span data-close-nav>|||</span>
 	{{#if currentUser}}
-	<a href="{{pathFor 'journeyOptions'}}">Play</a>
+	<a data-close-nav href="{{pathFor 'journeyOptions'}}">Play</a>
 	{{/if}}
-	<a href="{{pathFor 'gallery'}}">Gallery</a>
-	<a href="{{pathFor 'about'}}">About</a>
+	<a data-close-nav href="{{pathFor 'gallery'}}">Gallery</a>
+	<a data-close-nav href="{{pathFor 'about'}}">About</a>
 	{{#if currentUser}}
-   <a href="{{pathFor 'home'}}" data-logout>Logout</a>
+   <a data-close-nav href="{{pathFor 'home'}}" data-logout>Logout</a>
   {{else}}
-  <a href="{{pathFor 'signIn'}}">Sign In</a>
+  <a data-close-nav href="{{pathFor 'signIn'}}">Sign In</a>
   {{/if}}
 </div>
 {{else}}

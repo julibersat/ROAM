@@ -1,6 +1,6 @@
 <template name="galleryView">
 <div style="height:100%;margin-top:20px;">
-<a href="" data-search-captures class="{{isActive 'captures'}}">Captures</a> <a href="" data-search-journeys class="{{isActive 'journeys'}}">Journeys</a> <a href="" data-my-history class="{{isActive 'history'}}">History</a>
+<a href="" data-search-captures class="{{isActive 'captures'}}">Captures</a> <a href="" data-search-journeys class="{{isActive 'journeys'}}">Journeys</a> {{#if currentUser}}<a href="" data-my-history class="{{isActive 'history'}}">History</a>{{/if}}
 <br>
 {{#if $eq currentNav 'captures'}}
 <div class="col-md-12">
@@ -11,7 +11,7 @@
 	<div class="col-md-offset-3 col-md-6" style="margin-bottom:100px;">
 	<h1 class="active">{{#each tags}}{{.}} {{/each}}</h1>
 	<h3 class="time-subhead">{{prettifyDate createdAt}}</h3>
-    <img src="{{captureImage.link}}">
+    <img class="img-responsive" style="margin-left:auto;margin-right:auto;" src="{{captureImage.link}}">
     </div>
    {{/with}}
   {{/EasySearch.Each}}
@@ -20,8 +20,8 @@
 {{> EasySearch.Input index=userJourneysIndex attributes=journeysAttr}}
 	{{#EasySearch.Each index=userJourneysIndex }}
 	{{#with journey}}
-	<h1>{{journeyName}}</h1>
-<h2>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
+	<h1 class="active">{{journeyName}}</h1>
+<h2 class="time-subhead">{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
 	{{> journeyCarousel}}
 	{{/with}}
   {{/EasySearch.Each}}

@@ -34,7 +34,7 @@ Template.galleryView.helpers({
 		return UserJourneys.findOne({_id: this._id})
 	},
 	isActive(section) {
-		return (section === Template.instance().currentNav.get() ? "active":"")
+		return (section === Template.instance().currentNav.get() ? "active-red":"")
 	},
 	capturesAttr(){
 		return {placeholder: "Search captures by tag"}
