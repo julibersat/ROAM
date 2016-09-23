@@ -1,23 +1,15 @@
 <template name="journeyEndView">
 <div style='height:100%;overflow:auto;'>
-<h1>Journey End</h1>
+<h1 class="active">Your Journey...</h1>
 {{#with currentUser.activeJourney}}
-{{#autoForm type="method-update" meteormethod="nameJourney" id="nameJourney" collection="UserJourneys" doc=this}}
-{{> afQuickField name="journeyName"}}
-<button class="btn btn-primary" type="submit">Finish!</button>
-{{/autoForm}}
-
-<h1>{{journeyType}}</h1>
 <p>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</p>
-<div class="row">
-{{#each userCaptures}}
-<div class="col-md-4">
-<h1>{{directiveText}}</h1>
-<p>{{#each tags}}{{.}}{{/each}}</p>
-<img src="{{captureImage.link}}" class="img-responsive">
+{{> journeyCarousel}}
+{{#autoForm type="method-update" meteormethod="nameJourney" id="nameJourney" collection="UserJourneys" doc=this}}
+<div class="col-md-offset-3 col-md-6" style="margin-bottom:30px;">
+{{> afFieldInput name="journeyName" class="input-lg"}}
+<button class="btn btn-primary" type="submit">Name Your Journey and Finish!</button>
 </div>
-{{/each}}
-</div>
+{{/autoForm}}
 {{/with}}
 </div>
 </template>
