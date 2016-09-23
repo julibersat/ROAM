@@ -7,7 +7,7 @@
 {{#unless hasImageUpload}}
 <div data-capture-image class="frostyborder" style="user-select:none;max-width:300px;">
 <div class="frostybox" style="padding:25px;">
-<h1 style="user-select:none;">{{$.App.currentCapturePrompt.get.text}}</h1>
+<h1 class="no-select">{{$.App.currentCapturePrompt.get.text}}</h1>
 </div>
 </div>
 <div style="position:fixed;bottom:30px;left:50%; transform: translateX(-50%);width:80px;height:140px;z-index:9999;"  data-capture-image>
@@ -17,7 +17,7 @@
 
 <div class="frostyborder" style="max-width:500px;">
 <div class="frostybox">
-<h1>DESCRIBE IT<br>IN 3<br>WORDS</h1>
+<h1 class="no-select">DESCRIBE IT<br>IN 3<br>WORDS</h1>
 <div class="word-input">
 {{> afFieldInput name="tags.0"}}
 {{> afFieldInput name="tags.1"}}

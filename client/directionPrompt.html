@@ -11,8 +11,8 @@
 </div>
 {{#if $eq $.App.currentDirectivePrompt.get.type "Distance"}}
 <div data-new-capture class="frostyborder" style="max-width:500px;">
-<div class="frostybox" style="user-select:none;"><meta name="viewport" content="width=device-width, user-scalable=no" />
-<h1 style="user-select:none;">{{$.App.currentDirectivePrompt.get.randVerb}}<br><span style="font-size:2.2em;">{{$.App.currentDirectivePrompt.get.randNum}}</span><br>{{$.App.currentDirectivePrompt.get.unit}}</h1>
+<div class="frostybox" >
+<h1 class="no-select">{{$.App.currentDirectivePrompt.get.randVerb}}<br><span style="font-size:2.2em;">{{$.App.currentDirectivePrompt.get.randNum}}</span><br>{{$.App.currentDirectivePrompt.get.unit}}</h1>
 </div>
 </div>
 {{else}}
