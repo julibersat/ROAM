@@ -33,6 +33,14 @@ a:hover, a:focus {
 	height:100%;
 }
 
+.arrow-bottom {
+	position:fixed;
+	bottom:0;
+	left:50%;
+	height:30%;
+	transform: translateX(-50%);
+}
+
 .active {
 	color: $yellow;	
 }
