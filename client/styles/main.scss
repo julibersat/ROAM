@@ -54,13 +54,6 @@ a:hover, a:focus {
 		color: $red !important;
 	}
 }
-.bottom-street hr{
-  border:none;
-  border-top:4px dashed #fbbb18;
-  height:3px;
-  transform:translateY(100%);
-}
-
 .time-subhead {
 	margin-top: -10px;
 }
@@ -131,5 +124,10 @@ a:hover, a:focus {
 	height:50px;
 	width:100%;
 	background-color:$dark-grey;
+	background-image: url('/dashed-line.png');
+	background-repeat:repeat-x;
+	background-position:0% 50%;
+	background-size:20%;
+	transition-property: background-position;
+	transition-duration: 1s;
 }
-

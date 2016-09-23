@@ -13,6 +13,7 @@ Template.roamingGameView.events({
 		App.newDirectivePrompt();
 	},
 	"click [data-new-capture]" (e, t){
+		App.backgroundPosition.set(App.backgroundPosition.get()-50);
 		Session.set("isCapturing", true);
 		App.newCapturePrompt();
 	}

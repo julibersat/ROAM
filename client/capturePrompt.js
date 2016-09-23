@@ -12,6 +12,7 @@ Template.capturePrompt.onDestroyed(function(){
 Template.capturePrompt.events({
 	"click [data-capture-image]"(){
 		$('#capture-image').next().click()
+		App.backgroundPosition.set(App.backgroundPosition.get()-50);
 	}
 })
 
@@ -30,6 +31,7 @@ AutoForm.hooks({
 			}
 		},
 		onSuccess(doc) {
+			App.backgroundPosition.set(App.backgroundPosition.get()-50);
 			Session.set("isCapturing", false);
 			if(Meteor.user().activeJourney().timeLeft() == "Times up!"){
 				FlowRouter.go("journeyEnd")

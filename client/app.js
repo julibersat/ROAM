@@ -1,5 +1,6 @@
 App = {};
 
+App.backgroundPosition = new ReactiveVar(0);
 App.currentDirectivePrompt = new ReactiveVar("directivePrompt");
 App.currentCapturePrompt = new ReactiveVar("capturePrompt");
 
