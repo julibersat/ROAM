@@ -249,20 +249,7 @@ a{
 
 /* Text resizing */
 body  { font-size: 2.85em;  }
-@media all and (min-height: 350px)  {  .sign { font-size:.9em;  } }
-@media all and (min-height: 400px)  {  .sign { font-size:1.1em;  } }
-@media all and (min-height: 450px)  {  .sign { font-size:1.3em;  } }
-@media all and (min-height: 500px)  {  .sign { font-size:1.6em;  } }
-@media all and (min-height: 550px)  {  .sign { font-size:1.8em;  } }
-@media all and (min-height: 600px)  {  .sign { font-size:2.0em;  } }
-@media all and (min-height: 650px)  {  .sign { font-size:2.2em;  } }
-@media all and (min-height: 700px) {  .sign { font-size:2.4em;  } }
-@media all and (min-height: 750px) {  .sign { font-size:2.6em;  } }
-@media all and (min-height: 800px) {  .sign { font-size:2.8em;  } }
-@media all and (min-height: 850px) {  .sign { font-size:3.0em;  } }
-@media all and (min-height: 900px) {  .sign { font-size:3.2em;  } }
-@media all and (min-height: 950px) {  .sign { font-size:3.4em;  } }
-@media all and (min-height: 1000px) {  .sign { font-size:3.6em;  } }
+
 
 
 /* Gallery */
