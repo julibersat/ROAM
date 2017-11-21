@@ -1,10 +1,10 @@
 module.exports = {
   servers: {
     one: {
-      host: '159.203.98.172',
+      host: '138.197.38.248',
       username: 'root',
-      password: 'kl0n0likespen15',
-      // pem: './mykey',
+      //password: 'kl0n0likespen15',
+       pem: '~/.ssh/id_rsa',
     },
   },
 
@@ -17,7 +17,7 @@ module.exports = {
 //    buildOptions: {
 //      serverOnly: true
  //   },
-    dockerImage: 'abernix/meteord:base',
+    dockerImage: 'abernix/meteord:node-8.4.0-base',
     env: {
       ROOT_URL: 'http://roamgetlost.com',
       MONGO_URL: 'mongodb://localhost/meteor'

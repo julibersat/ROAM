@@ -1,13 +1,8 @@
-var directionVerbs = {
+var directionVerbs = [{
   name: "blah",
-  imageURL: {
-    type: String,
-    label: "Dis a gif",
-    /*autoform: {
-      afFieldInput: {
-        type: "fileUpload",
-        collection: 'Images'
-      }
-    }*/
-  }
-};
+  imageURL: "/verbs/blah.jpg"
+},
+{
+  name: "test",
+  imageURL: "/verbs/test.jpg"
+}];
