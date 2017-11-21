@@ -1,9 +1,7 @@
 <template name="mainNav">
 {{#if displayMainNav}}
 <div class="pull-out mainNav-pull-out" style="font-size:2rem;text-transform: uppercase;height:4rem;">
-{{#if $.Session.get 'navOpen'}}
-<div class="">
-	<span data-close-nav>|||</span>
+	<span data-toggle-nav>|||</span>
 	{{#if currentUser}}
 	<a data-close-nav href="{{pathFor 'journeyOptions'}}">Play</a>
 	{{/if}}
@@ -14,10 +12,6 @@
   {{else}}
   <a data-close-nav href="{{pathFor 'signIn'}}">Sign In</a>
   {{/if}}
-</div>
-{{else}}
-<span data-open-nav>|||</span>
-{{/if}}
 </div>
 {{/if}}
 </template>

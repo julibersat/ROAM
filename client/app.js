@@ -33,4 +33,4 @@ App.newDirectivePrompt();
 
 App.newCapturePrompt();
 
- Helpers.addScope('App', App);
+Helpers.addScope('App', App);
