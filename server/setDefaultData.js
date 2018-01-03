@@ -5,6 +5,7 @@ Meteor.methods({
     DirectionUnits.remove({});
     DirectionVerbs.remove({});
     DirectiveTypes.remove({});
+    CapturePrompts.remove({});
     _.each(directionUnits, function(directionUnit) {
       DirectionUnits.insert({text: directionUnit.text})
     });
@@ -14,9 +15,16 @@ Meteor.methods({
     _.each(directiveTypes, function(directiveType) {
       DirectiveTypes.insert({name: directiveType.name, iconURL: directiveType.imageURL});
     });
+    _.each(capturePrompts, function(capturePrompt) {
+      CapturePrompts.insert({text: capturePrompt.text});
+    })
     console.log("done")
   }
 })
+
+var capturePrompts = [{
+  text: "capture"
+}]
 
 var directionUnits = [{
   text: "minutes"
@@ -82,5 +90,9 @@ var directiveTypes = [{
 {
   name: "frosty-box",
   imageURL: "/types/frosty-box.png"
+},
+{
+  name: "distance",
+  imageURL: "/types/turn-left.png"
 }
 ]

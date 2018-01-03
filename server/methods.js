@@ -7,7 +7,7 @@ Meteor.methods({
 		let unitName, verbName, randNum = Math.floor(Math.random() * 20) + 2;
 		let dirName = randDir.name;
 		if(Math.random() > .3){
-			randDir = DirectiveTypes.findOne({name: "Distance"})
+			randDir = DirectiveTypes.findOne({name: "distance"})
 			dirName = "Distance"
 		}
 		let directionText = randDir.name;
@@ -21,8 +21,7 @@ Meteor.methods({
 			verbName = randVerb.text;
 			unitName = randUnit.text;
 		}
-
-		return {unit: unitName, randVerb: verbName, directiveTypeId: randDir._id, randNum: randNum, type: dirName};
+		return {unit: unitName, directiveTypeImageURL: randDir.iconURL, randVerb: verbName, directiveTypeId: randDir._id, randNum: randNum, type: dirName};
 	},
 	getRandomCapturePrompt() {
 		let capArray = CapturePrompts.find().fetch()
