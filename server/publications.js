@@ -5,12 +5,12 @@ Meteor.publish(null, function(){
 	return Meteor.users.find({_id: this.userId})
 });
 
-Meteor.publish("currentJourney", function(){
+Meteor.publish(null, function(){
   if(!this.userId){
     return this.ready();
   }
   else 
-    return Journeys.findOne({});
+    return UserJourneys.find({userId: this.userId}, {sort: {timeStart: -1}, limit: 1});
 });
 
 Meteor.publish("oneDirective", function(directiveId){

@@ -30,8 +30,6 @@ dburles:collection-helpers
 aldeed:collection2
 alanning:roles
 fortawesome:fontawesome
-ostrio:autoform-files
-ostrio:files
 momentjs:moment
 richsilv:owl-carousel
 fourseven:scss
@@ -44,3 +42,6 @@ easy:search
 raix:handlebar-helpers
 reactive-dict@1.2.0
 dynamic-import@0.2.0
+edgee:slingshot
+timbrandin:autoform-slingshot
+timbrandin:image-resize-client
