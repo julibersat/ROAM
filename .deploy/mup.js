@@ -19,8 +19,14 @@ module.exports = {
  //   },
     dockerImage: 'abernix/meteord:node-8.4.0-base',
     env: {
-      ROOT_URL: 'http://roamgetlost.com',
+      ROOT_URL: 'http://game.roamgetlost.com',
       MONGO_URL: 'mongodb://localhost/meteor'
     },
+  },
+  mongo: {
+    version: '3.4.1',
+    servers: {
+      one: {}
+    }
   }
 };
