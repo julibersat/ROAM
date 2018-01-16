@@ -23,7 +23,7 @@ html, body {
 
 @import 'old.scss';
 
-a:hover, a:focus {
+a:hover, a:focus  {
 	color:$yellow !important;
 	text-decoration:none;
 }
@@ -42,7 +42,7 @@ a:hover, a:focus {
 }
 
 .active {
-	color: $yellow;	
+	color: $yellow;
 }
 
 .active-red {
@@ -95,14 +95,14 @@ a:hover, a:focus {
 	right:-8.5rem;
 	background-color:$yellow;
 	color:$dark-grey;
-	
+
 }
 
 .no-select {
 	-webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
-  user-select: none; 
+  user-select: none;
 }
 
 .mainNav-pull-out {
