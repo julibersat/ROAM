@@ -11,15 +11,15 @@ Template.capturePrompt.onDestroyed(function(){
 
 Template.capturePrompt.events({
 	"click [data-capture-image]"(){
-		$('#capture-image').next().click()
+		$('[file-input]').click()
 		App.backgroundPosition.set(App.backgroundPosition.get()-50);
 	}
 })
 
 Template.capturePrompt.helpers({
 	hasImageUpload(){
-		return Template.instance().hasImageUpload.get();
-	}
+		return !!AutoForm.getFieldValue('newUserCapture', "captureImageURL");
+	},
 })
 
 AutoForm.hooks({
