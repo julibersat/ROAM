@@ -2,19 +2,18 @@
 {{> mapBG}}
 {{#autoForm collection="UserCaptures" type="insert" id="newUserCapture"}}
 <div style="{{#if hasImageUpload}}display:none;{{/if}}">
-<div style="display:none;">
-{{> afFieldInput name="captureImageURL" id="capture-image"}}
-</div>
-</div>
+  <div style="display:none;">
+    {{> afFieldInput name="captureImageURL" id="capture-image"}}
+  </div>
 <div data-capture-image class="frostyborder" style="user-select:none;max-width:300px;">
-<div class="frostybox" style="padding:25px;">
-<h1 class="no-select">{{$.App.currentCapturePrompt.get.text}}</h1>
-</div>
+  <div class="frostybox" style="padding:25px;">
+    <h1 class="no-select">{{$.App.currentCapturePrompt.get.text}}</h1>
+  </div>
 </div>
 <div style="position:fixed;bottom:30px;left:50%; transform: translateX(-50%);width:80px;height:140px;z-index:9999;"  data-capture-image>
-<img class="img-responsive" src="/marker.svg" />
+  <img class="img-responsive" src="/marker.svg" />
 </div>
-
+</div>
 <div class="frostyborder" style="max-width:500px;{{#unless hasImageUpload}}display:none;{{/unless}}">
 <div class="frostybox">
 <h1 class="no-select">DESCRIBE IT<br>IN 3<br>WORDS</h1>

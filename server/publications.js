@@ -22,3 +22,8 @@ Meteor.publish("oneCapturePrompt", function(captureId){
 });
 
 //Meteor.publish("randomDirective")
+
+Meteor.publish("userCaptures", function(journeyId){
+  console.log(journeyId)
+  return UserCaptures.find({userJourneyId: journeyId});
+});

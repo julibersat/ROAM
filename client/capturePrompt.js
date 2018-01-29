@@ -1,7 +1,11 @@
 Template.capturePrompt.onCreated(function(){
 	this.hasImageUpload = new ReactiveVar(false);
-	this.clock = window.setInterval(()=>{
-		this.hasImageUpload.set(AutoForm.getFieldValue("captureImageId", "newUserCapture"))
+	console.log(AutoForm.getFieldValue("captureImageURL", "newUserCapture"));
+	this.clock = window.setInterval(() => {
+		if(AutoForm.getFieldValue("captureImageURL", "newUserCapture")){
+			this.hasImageUpload.set(true);
+			window.clearInterval(this.clock);
+		}
 	}, 1000)
 })
 
@@ -18,7 +22,7 @@ Template.capturePrompt.events({
 
 Template.capturePrompt.helpers({
 	hasImageUpload(){
-		return !!AutoForm.getFieldValue('newUserCapture', "captureImageURL");
+		return Template.instance().hasImageUpload.get();
 	},
 })
 

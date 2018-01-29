@@ -1,12 +1,12 @@
 <template name="journeyCarousel">
 <div class="owl-carousel">
-{{#each userCaptures}}
-<div>
-{{> recaro}}
-<h3>{{directiveText}}</h3>
-<p>{{#each tags}}{{.}} {{/each}}</p>
-<img src="{{captureImageURL}}" class="img-responsive">
-</div>
-{{/each}}
+  {{#each userCaptures}}
+    <div>
+      {{> recaro}}
+      <h3>{{directiveText}}</h3>
+      <p>{{#each tags}}{{.}} {{/each}}</p>
+      <img src="{{captureImageURL}}" class="img-responsive">
+    </div>
+  {{/each}}
 </div>
 </template>
