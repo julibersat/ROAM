@@ -1,0 +1,7 @@
+<template name="userHistory">
+{{#each currentUser.userJourneys}}
+<h1>{{journeyName}}</h1>
+<h2>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
+{{> journeyCarousel __originalId=_id}}
+{{/each}}
+</template>

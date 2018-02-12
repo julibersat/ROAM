@@ -2,6 +2,8 @@
 
 Meteor.methods({
   "setDefaultData"(){
+    UserCaptures.remove();
+    UserJourneys.remove();
     DirectionUnits.remove({});
     DirectionVerbs.remove({});
     DirectiveTypes.remove({});
@@ -18,7 +20,6 @@ Meteor.methods({
     _.each(capturePrompts, function(capturePrompt) {
       CapturePrompts.insert({text: capturePrompt.text});
     })
-    console.log("done")
   }
 })
 
@@ -264,9 +265,6 @@ var directionUnits = [{
   text: "steps"
 },
 {
-  text: "minutes"
-},
-{
   text: "blocks"
 }]
 
@@ -314,10 +312,6 @@ var directiveTypes = [{
 {
   name: "turn-left",
   imageURL: "/types/turn-left.png"
-},
-{
-  name: "frosty-box",
-  imageURL: "/types/frosty-box.png"
 },
 {
   name: "distance",

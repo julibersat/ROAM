@@ -43,6 +43,7 @@ raix:handlebar-helpers
 reactive-dict@1.2.0
 dynamic-import@0.2.0
 edgee:slingshot
-timbrandin:autoform-slingshot
 thinksoftware:image-resize-client
 check
+tap:i18n
+timbrandin:autoform-slingshot

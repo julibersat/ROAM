@@ -23,14 +23,10 @@
 <h2 class="time-subhead">{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
 	{{> journeyCarousel}}
   {{/EasySearch.Each}}
+  {{> EasySearch.LoadMore index=userCapturesIndex}}
 {{/if}}
 {{#if $eq currentNav 'history'}}
-{{#each currentUser.userJourneys}}
-<h1>{{journeyName}}</h1>
-<h2>{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
-{{> journeyCarousel}}
-{{/each}}
-{{> EasySearch.LoadMore index=userCapturesIndex}}
+{{> userHistory}}
 {{/if}}
 </div>
 </template>
