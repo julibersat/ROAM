@@ -96,9 +96,10 @@ a:hover, a:focus  {
 	padding:1rem;
 	height:5.5rem;
 	border-radius:2.5rem 0 0 2.5rem;
-	transition: right .5s;
+	transition: right .5s, transform .5s;
 	&:hover {
-		right: 0rem;
+		transform: translateX(0);
+		right: 0;
 	}
 	z-index:9999;
 }
@@ -120,7 +121,8 @@ a:hover, a:focus  {
 
 .mainNav-pull-out {
 	top:3rem;
-	right:0px;
+	right:30px;
+	transform: translateX(100%);
 	background-color:$yellow;
 	color:$dark-grey;
 	a:active, a:hover, a:focus {
