@@ -11,6 +11,14 @@ Template.galleryView.events({
 	},
 	"click [data-my-history]"(){
 		Template.instance().currentNav.set("history")
+	},
+	"click [data-delete-capture-id]"(e, t){
+		var captureId = $(e.currentTarget).attr("data-delete-capture-id");
+		Meteor.call("deleteCapture", captureId)
+	},
+	"click [data-delete-journey-id]"(e, t){
+		var journeyId = $(e.currentTarget).attr("data-delete-journey-id");
+		Meteor.call("deleteJourney", journeyId);
 	}
 })
 

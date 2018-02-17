@@ -8,17 +8,23 @@
 </div>
 	{{#EasySearch.Each index=userCapturesIndex }}
 	<div class="col-md-offset-3 col-md-6" style="margin-bottom:100px;">
+        {{#if currentUser.isAdmin}}
+  <button class="btn btn-warning" data-delete-capture-id="{{__originalId}}">Delete Capture</button>
+  {{/if}}
   	<h1 class="active">{{#each tags}}{{.}} {{/each}}</h1>
   	<h3 class="time-subhead">{{prettifyDate createdAt}}</h3>
     <img class="img-responsive" style="margin-left:auto;margin-right:auto;" src="{{captureImageURL}}">
   </div>
   {{/EasySearch.Each}}
-
+<div class="clearfix"></div>
 {{> EasySearch.LoadMore index=userCapturesIndex content="Load more captures"}}
 {{/if}}
 {{#if $eq currentNav 'journeys'}}
 {{> EasySearch.Input index=userJourneysIndex attributes=journeysAttr}}
 	{{#EasySearch.Each index=userJourneysIndex }}
+    {{#if currentUser.isAdmin}}
+  <button class="btn btn-warning" data-delete-journey-id="{{__originalId}}">Delete Journey</button>
+  {{/if}}
 	<h1 class="active">{{journeyName}}</h1>
 <h2 class="time-subhead">{{prettifyDate timeStart}} - {{prettifyDate timeEnd}}</h2>
 	{{> journeyCarousel}}

@@ -36,5 +36,18 @@ Meteor.methods({
 	signLiability(){
 		if(!this.userId) return;
 		Meteor.users.update({_id: this.userId}, {$set: {hasSignedLiability: true}})
-	}
+	},
+  makeUserAdmin(){
+    if(!this.userId) return;
+    Meteor.users.update({_id: this.userId}, {$set: {isAdmin: true}});
+  },
+  deleteJourney(journeyId) {
+    if(!this.userId) return;
+    UserJourneys.remove({_id: journeyId});
+    UserCaptures.remove({journeyId: journeyId})
+  },
+  deleteCapture(captureId) {
+    if(!this.userId) return;
+    UserCaptures.remove({_id: captureId});
+  }
 })
