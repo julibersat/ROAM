@@ -153,3 +153,8 @@ a:hover, a:focus  {
 	transition-property: background-position;
 	transition-duration: 1s;
 }
+
+.stopJourney:hover {
+	color: $dark-grey !important;
+	font-weight:bold;
+}
